@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Capture the moment foundation </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="homePage.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body>
+    <div class="box-area">
+        <div class="back">
+            <img src="/Volumes/NO NAME/Derrick/img/img2.jpg">
+        </div>
+
+    <header>
+
+        <div class="logo">
+            <img src="/Volumes/NO NAME/Derrick/img/img2.jpg">
+        </div>
+
+        <nav>
+
+            <div class="toggle">
+                <a href="#"> <ion-icon name="menu-outline"></ion-icon> </a>
+            </div>
+
+            <ul>
+                <li><a href="index.html" > Home </a></li>
+                <li><a href="About.html" > About Us </a></li>
+                <li><a href="contact.html" > Contact </a></li>
+                <li><a href="support.html" > Support Us </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="list-body">
+    <div class="list">
+        <ul>
+            <li><a href="index.html" > Home </a></li>
+            <li><a href="About.html" > About Us </a></li>
+            <li><a href="contact.html" > Contact </a></li>
+            <li><a href="support.html" > Support Us </a></li>
+        </ul>
+    </div>
+</div>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h1>We're excited to have you here</h1> 
+            <p> You can support our movement through donations and regular purchasing of our product</p>
+            <h2>Our Motto</h2>
+            <p> BRINGING HOPE TO THE NEEDY THROUGH MEDIA SUPPORT</p>
+
+            <h2>Coordinators</h2>
+         <div class="front-img">
+            <div class="front">
+            <img src="/Volumes/NO NAME/Derrick/img/img17.jpg" alt=""> <br>
+            <p>CEO of CTMF: Mr.Owusu Derrick</p>
+            </div>
+
+            <div class="front">
+            <img src="/Volumes/NO NAME/Derrick/img/img18.jpg" alt=""> <br>
+            <p>Secretary of CTMF: Miss Owusu Benedicta</p>
+        </div>
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="/Volumes/NO NAME/Derrick/img/img3.jpg" alt="">
+       </div>
+        
+    </div>
+
+            <a href="support.html"> <button type="submit">Donate</button> </a>
+        </div> <br>
+        
+        <div class="main-content">
+            <h2>Featured Products</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="/Volumes/NO NAME/Derrick/img/img4.jpg" alt=""> 
+                    
+                </div>
+                <div class="product">
+                     <img src="/Volumes/NO NAME/Derrick/img/img3.jpg" alt="">
+                </div>
+            </div>
+            <h3> Providing the less priviledged with the support they need to also run this race called life. If you also wnat to give a helping to hand to the needy out there please click the link <font color="blue">"view other product"</font> down below to buy the products down below and please spread the word, your support is deeply appreciated. </h3><br>
+            <a href="product.html" class="btn"> view other Products</a>
+        </div>
+    </div>
+
+    <footer>
+     <img src="/Volumes/NO NAME/Derrick/img/img1.jpg" >
+     
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            $(".toggle").on("click", function(){
+                if($(".list").hasClass("active")){
+                    $(".list").removeClass("active");
+                    $(this).find("a").html("<ion-icon name='menu-outline'> </ion-icon>");
+                } else{
+                    $(".list").addClass("active");
+                    $(this).find("a").html("<ion-icon name='Close-outline'> </ion-icon>");
+                }
+            });
+        } );
+
+    </script>
+    </div>
+
+    <script>
+        document.querySelectorAll('.hero-content img').forEach(product => {
+            product.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block'
+                document.querySelector('.popup-image img').src = product.getAttribute('src')
+            }
+        });
+
+        document.querySelector('.popup-image').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none'
+        }
+       </script>
+</body>
+
+</html>
